@@ -12,14 +12,14 @@ namespace API.Controllers
     [ApiController]
     public class UnitsConverterController : ControllerBase
     {
-        //public UnitsConverterController()
-        //{
-        //}
+        public UnitsConverterController()
+        {
+        }
 
-        //[HttpPost]
-        //public async Task<ActionResult<Unit>> CreateUnit(Unit unit)
-        //{
-           
-        //}
+        [HttpPost]
+        public ActionResult<Unit> ConvertUnit()
+        {
+            return Ok("sucess");
+        }
     }
 }
