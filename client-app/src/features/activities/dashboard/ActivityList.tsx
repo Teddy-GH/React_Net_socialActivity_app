@@ -18,7 +18,7 @@ const ActivityList = ({activities, selectActivity, deleteActivity, submitting}: 
   }
   return (
     <Segment>
-        <Item.Group>
+        <Item.Group divided>
             {activities.map(activity => (
                 <Item key={activity.id}>
                    <Item.Content>
