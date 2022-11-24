@@ -13,8 +13,13 @@ function App() {
   //key={location.key}
   
   return (
-    <Router>
-      {/* <Route 
+    <>
+      
+      <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+        {/* <Route 
       path={'/(.+)'}
       render={() => (
         <>
@@ -25,17 +30,18 @@ function App() {
       
       
       /> */}
-      <Navbar />
-      <Container style={{ marginTop: "7em" }}>
-        <Routes>
-            <Route path='/' element={<Homepage />} />
-            <Route path='/activities' element={<ActivityDashboard />} />
-            <Route path='/activities/:id' element={<ActivityDetails />} />
-            <Route path={'/createActivity'} element={<ActivityForm />} />
-            <Route  path={'/manage/:id'} element={<ActivityForm />} />
+        <Navbar />
+        <Container style={{ marginTop: "7em" }}>
+          <Routes>
+            {/* <Route path='/' element={<Homepage />} /> */}
+            <Route path="/activities" element={<ActivityDashboard />} />
+            <Route path="/activities/:id" element={<ActivityDetails />} />
+            <Route path={"/createActivity"} element={<ActivityForm />} />
+            <Route path={"/manage/:id"} element={<ActivityForm />} />
           </Routes>
-      </Container>
-    </Router>
+        </Container>
+      </Router>
+    </>
   );
 }
 
