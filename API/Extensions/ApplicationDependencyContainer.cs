@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Persistence;
 using Application.Activities;
 using Microsoft.OpenApi.Models;
+using Application.Interfaces;
+using Infrastructure.Security;
 
 namespace API.Extenstions
 {
@@ -28,6 +30,7 @@ namespace API.Extenstions
 
             services.AddMediatR(typeof(List.Handler).Assembly);
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+            services.AddScoped<IUserAccessor, UserAccessor>();
             return services;
         }
     }
